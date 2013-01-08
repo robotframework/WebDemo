@@ -1,0 +1,5 @@
+<ul>
+    <li><a href="https://code.google.com/p/robotframework/">Robot Framework</a> <small>googlecode</small></li>
+    <li><a href="https://github.com/robotframework/RIDE">RIDE</a> <small>github</small></li>
+    <li><a href="https://github.com/rtomac/robotframework-selenium2library">Selenium2Library</a> <small>github</small></li>
+</ul>
