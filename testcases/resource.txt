@@ -10,7 +10,7 @@ Library        Selenium2Library
 *** Variables ***
 
 ${SERVER}        localhost:7272
-${BROWSER}       firefox
+${BROWSER}       chrome
 ${DELAY}         0
 ${VALID USER}    demo
 ${VALID PASSWD}  mode
@@ -47,3 +47,14 @@ Welcome Page Should Be Open
 Login Should Have Failed
     Location Should Be  ${ERROR URL}
     Title Should Be  Error Page
+
+Valid Login
+    Open Browser To Login Page
+    Input Username    demo
+    Input Password    mode
+    Submit Credentials
+    Welcome Page Should Be Open
+
+
+
+
