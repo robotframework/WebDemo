@@ -50,8 +50,8 @@ Login Should Have Failed
 
 Valid Login
     Open Browser To Login Page
-    Input Username    demo
-    Input Password    mode
+    Input Username    ${VALID USER}
+    Input Password    ${VALID PASSWD}
     Submit Credentials
     Welcome Page Should Be Open
 
