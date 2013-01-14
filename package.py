@@ -8,7 +8,7 @@ THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 #execfile(os.path.join(THIS_DIR, '..', 'src', 'Selenium2Library', 'version.py'))
 
 FILES = {
-    '': ['rundemo.py', 'README.txt'],
+    '': ['rundemo.py'],
     'testcases': ['valid_login.txt', 'invalid_login.txt','content_check.txt','resource.txt'],
     'demoapp': ['server.py'],
     'demoapp/html': ['index.html', 'welcome.html', 'error.html', 'demo.css', 'file_information.txt', 'file_names.txt', 'file_places.txt']
