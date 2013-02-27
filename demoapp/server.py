@@ -27,7 +27,7 @@ class DemoServer(TCPServer):
     allow_reuse_address = True
 
     def __init__(self, port=PORT):
-        TCPServer.__init__(self, ('localhost', int(port)), PostingHandler)
+        TCPServer.__init__(self, ('localhost', int(port )), SimpleHTTPRequestHandler)
 
     def serve(self, directory=ROOT):
         chdir(directory)
@@ -37,12 +37,6 @@ class DemoServer(TCPServer):
         except KeyboardInterrupt:
             server.server_close()
         print 'Demo server stopped.'
-
-
-class PostingHandler(SimpleHTTPRequestHandler):
-
-    def do_POST(self):
-        self.do_GET()
 
 
 if __name__ == '__main__':
