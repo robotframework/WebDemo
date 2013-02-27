@@ -7,3 +7,7 @@ dist
 *$py.class
 .DS_Store
 .spyderworkspace
+log.html
+report.html
+output.xml
+*.log
