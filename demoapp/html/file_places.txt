@@ -1,9 +1,0 @@
-<ul>
-<li>Barcelona, Spain <a href=""><small>4 Posts</small></a></li>
-<li>Milan, Italy <a href=""><small>5 Posts</small></a></li>
-<li>Liverpool, England <a href=""><small>2 Posts</small></a></li>
-<li>Chicago, USA <a href=""><small>7 Posts</small></a></li>
-<li>Munich, Germany <a href=""><small>9 Posts</small></a></li>
-<li>Marseille, France <a href=""><small>7 Posts</small></a></li>
-<li>Helsinki, Finland <a href=""><small>1 Post</small></a></li>
-</ul>

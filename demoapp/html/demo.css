@@ -1,108 +1,13 @@
-/* Simple styles for demo 
- *
- * Setting text-align is a workaround for IE. See for example
- *  http://bluerobot.com/web/css/center1.html
- */
-
 body {
     font-family: sans-serif;
     color: black;
     background: #DDDDDD;
-    text-align: center;
 }
 #container {
     width: 30em;
-    height: auto;
+    height: 15em;
     margin: 5em auto;
     background: white;
     border: 1px solid gray;
     padding: 10px 30px;
-    text-align: left;
-}
-#title {
-    background: #86D1FF;
-    border-bottom: 1px solid black;
-}
-.tabbed_area {
-    border:1px solid #494e52;
-    background-color:#636d76;
-    padding:8px;
-}
-
-ul.tabs {
-    margin:0px; padding:0px;
-    margin-top:5px;
-    margin-bottom:6px;
-}
-ul.tabs li {
-    list-style:none;
-    display:inline;
-}
-ul.tabs li a {
-    background-color:#464c54;
-    color:#ffebb5;
-    padding:8px 14px 8px 14px;
-    text-decoration:none;
-    font-size:9px;
-    font-family:Verdana, Arial, Helvetica, sans-serif;
-    font-weight:bold;
-    text-transform:uppercase;
-    border:1px solid #464c54;
-}
-ul.tabs li a:hover {
-    background-color:#2f343a;
-    border-color:#2f343a;
-}
-ul.tabs li a.active {
-    background-color:#ffffff;
-    color:#282e32;
-    border:1px solid #464c54;
-    border-bottom: 1px solid #ffffff;
-}
-
-.content {
-    background-color:#ffffff;
-    padding:10px;
-    border:1px solid #464c54;
-    font-family:Arial, Helvetica, sans-serif;
-}
-#content_2, #content_3 { display:none; }
-
-.content ul {
-    margin:0px;
-    padding:0px 20px 0px 20px;
-}
-.content ul li {
-    list-style:none;
-    border-bottom:1px solid #d6dde0;
-    padding-top:15px;
-    padding-bottom:15px;
-    font-size:13px;
-}
-.content ul li:last-child {
-    border-bottom:none;
-}
-.content ul li a {
-    text-decoration:none;
-    color:#3e4346;
-}
-.content ul li a small {
-    color:#8b959c;
-    font-size:9px;
-    text-transform:uppercase;
-    font-family:Verdana, Arial, Helvetica, sans-serif;
-    position:relative;
-    left:4px;
-    top:0px;
-}
-.content ul li a:hover {
-    color:#a59c83;
-}
-.content ul li a:hover small {
-    color:#baae8e;
-}
-#content_3 small {
-    color: blue;
-    text-transform: uppercase;
-    float: right;
 }

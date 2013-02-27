@@ -1,54 +1,13 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Welcome Page</title>
-  <link href="demo.css" media="all" rel="stylesheet" type="text/css" />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("a.tab").click(function () {
-                $(".active").removeClass("active");
-                $(this).addClass("active");
-                $(".content").slideUp();
-                var content_show = $(this).attr("title");
-                $("#"+content_show).slideDown();
-            });
-        });
-    </script>
+  <link href="demo.css" media="all" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <div id='container'>
-    <h1>Welcome Page</h1>
-    <p>Login succeeded. Now you can <a href=".">logout</a>.</p>
-      <div class="tabbed_area">
-          <ul class="tabs">
-              <li><a href="#" title="content_1" class="tab active">Names</a></li>
-              <li><a href="#" title="content_2" class="tab">Places</a></li>
-              <li><a href="#" title="content_3" class="tab">Information</a></li>
-          </ul>
-          <div id="content_1" class="content">
-              <script type="text/javascript">
-                  jQuery.get('file_names.txt', function(data) {
-                      $('#content_1').html(data.replace(/\n/g,'<br/>'));
-                  });
-              </script>
-          </div>
-          <div id="content_2" class="content">
-              <script type="text/javascript">
-                  jQuery.get('file_places.txt', function(data) {
-                      $('#content_2').html(data.replace(/\n/g,'<br/>'));
-                  });
-              </script>
-          </div>
-          <div id="content_3" class="content">
-              <script type="text/javascript">
-                  jQuery.get('file_information.txt', function(data) {
-                      $('#content_3').html(data.replace(/\n/g,'<br/>'));
-                  });
-              </script>
-          </div>
-
-  <div id='stuff'></div>
-  </div>
-
+<div id='container'>
+  <h1>Welcome Page</h1>
+  <p>Login succeeded. Now you can <a href=".">logout</a>.</p>
+</div>
 </body>
 </html>

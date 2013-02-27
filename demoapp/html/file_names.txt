@@ -1,9 +1,0 @@
-<ul>
-<li>Teppo Testaaja</li>
-<li>Markku Matala</li>
-<li>Kimmo Korkea</li>
-<li>Timo Timpuri</li>
-<li>Marko Makea</li>
-<li>Antti Ankea</li>
-<li>Sami Samooja</li>
-</ul>
