@@ -1,15 +1,15 @@
-Web testing with Robot Framework
-================================
+Web testing with Robot Framework and Selenium2Library
+=====================================================
 
-`Robot Framework`__ is a generic test automation framework and this project
-contains a simple and easy-to-execute web testing demo for it. The example
-test cases are executed using `Selenium2Library`__, which is one of the many
-test libraries that can be used with Robot Framework.
+`Robot Framework`_ is a generic test automation framework and Selenium2Library_
+is one of the many test libraries that can be used with it. In addition to
+showing how Selenium2Library works, this demo introduces Robot Framework test
+data syntax, how tests are executed, and how logs and reports look like.
 
-See `project wiki`__ for more information about running the demo, viewing
+See `project wiki`_ for more information about running the demo, viewing
 results, etc. You can also view the tests and generated results through
-the wiki.
+the wiki without running the demo yourself.
 
-__ http://robotframework.org
-__ https://github.com/rtomac/robotframework-selenium2library
-__ https://bitbucket.org/robotframework/webdemo/wiki/Home
+.. _Robot Framework: http://robotframework.org
+.. _Selenium2Library: https://github.com/rtomac/robotframework-selenium2library/wiki
+.. _project wiki: https://bitbucket.org/robotframework/webdemo/wiki/Home
