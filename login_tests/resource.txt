@@ -5,9 +5,7 @@ Documentation     A resource file with reusable keywords and variables.
 ...               domain specific language.
 Library           Selenium2Library
 
-
 *** Variables ***
-
 ${SERVER}         localhost:7272
 ${BROWSER}        Firefox
 ${DELAY}          0
@@ -17,9 +15,7 @@ ${LOGIN URL}      http://${SERVER}/
 ${WELCOME URL}    http://${SERVER}/welcome.html
 ${ERROR URL}      http://${SERVER}/error.html
 
-
 *** Keywords ***
-
 Open Browser To Login Page
     Open Browser    ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
