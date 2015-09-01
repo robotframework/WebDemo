@@ -12,5 +12,5 @@ results, etc. You can also view the tests and generated results through the
 wiki without running the demo yourself.
 
 __ http://robotframework.org
-__ https://github.com/rtomac/robotframework-selenium2library/wiki
+__ https://github.com/robotframework/Selenium2Library
 __ https://bitbucket.org/robotframework/webdemo/wiki/Home
