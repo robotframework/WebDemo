@@ -21,8 +21,8 @@ To get the demo, you can either download and extract the latest
 ``demoapp`` and ``login_tests`` sub directories.
 
 Example `test cases`_ and `generated results`_ are available also online.
-There is thus no need to get the demo if are not interested in `running it`__
-yourself.
+There is thus no need to download the demo if you are not interested in
+`running it`__ yourself.
 
 __ `running demo`_
 
