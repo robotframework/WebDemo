@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+from __future__ import print_function
+
 from glob import glob
 from os import getcwd
 from os.path import abspath, dirname, join
@@ -19,6 +21,7 @@ FILES = ['README.rst',
 with ZipFile(ZIP_NAME, 'w', ZIP_DEFLATED) as zipfile:
     for pattern in FILES:
         for path in glob(pattern):
-            print 'Adding:  ', path
+            print('Adding:  ', path)
+
             zipfile.write(path, join(NAME, path))
-print 'Created: ', ZIP_NAME
+print('Created: ', ZIP_NAME)
