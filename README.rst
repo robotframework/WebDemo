@@ -1,9 +1,9 @@
-=====================================================
-Web testing with Robot Framework and Selenium2Library
-=====================================================
+====================================================
+Web testing with Robot Framework and SeleniumLibrary
+====================================================
 
 `Robot Framework`_ is a generic open source test automation framework and
-Selenium2Library_ is one of the many test libraries that can be used with
+SeleniumLibrary_ is one of the many test libraries that can be used with
 it. In addition to showing how they can be used together for web testing,
 this demo introduces the basic Robot Framework test data syntax, how tests
 are executed, and how logs and reports look like.
@@ -71,7 +71,7 @@ online.
 
     The system specific keywords created here form our own
     domain specific language. They utilize keywords provided
-    by the imported Selenium2Library_.
+    by the imported SeleniumLibrary_.
 
 See `Robot Framework User Guide`_ for more details about the test data syntax.
 
@@ -92,13 +92,13 @@ Preconditions
 -------------
 
 A precondition for running the tests is having `Robot Framework`_ and
-Selenium2Library_ installed, and they in turn require
+SeleniumLibrary_ installed, and they in turn require
 Python_. Robot Framework `installation instructions`__ cover both
 Robot and Python installations, and Selenium2Library has its own
 `installation instructions`__.
 
 In practice it is easiest to install Robot Framework and
-Selenium2Library along with its dependencies using `pip`_ package
+SeleniumLibrary along with its dependencies using `pip`_ package
 manager. Once you have pip installed, all you need to do is running
 these commands::
 
@@ -106,7 +106,7 @@ these commands::
     pip install robotframework-selenium2library
 
 __ https://github.com/robotframework/robotframework/blob/master/INSTALL.rst
-__ https://github.com/robotframework/Selenium2Library/blob/master/INSTALL.rst
+__ https://github.com/robotframework/SeleniumLibrary/blob/master/INSTALL.rst
 
 Starting demo application
 -------------------------
@@ -157,12 +157,10 @@ can be easily overridden from the command line::
     robot --variable BROWSER:Chrome login_tests
     robot --variable BROWSER:IE login_tests
 
-Consult Selenium2Library_ documentation about supported browsers. Notice also
-that other browsers than Firefox require separate browser drivers to be
-installed before they can be used with Selenium and Selenium2Library.
+Consult SeleniumLibrary_ documentation about supported browsers.
 
 .. _Robot Framework: http://robotframework.org
-.. _Selenium2Library: https://github.com/robotframework/Selenium2Library
+.. _SeleniumLibrary: https://github.com/robotframework/SeleniumLibrary
 .. _Python: http://python.org
 .. _pip: http://pip-installer.org
 .. _download page: https://bitbucket.org/robotframework/webdemo/downloads
