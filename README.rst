@@ -94,7 +94,7 @@ Preconditions
 A precondition for running the tests is having `Robot Framework`_ and
 SeleniumLibrary_ installed, and they in turn require
 Python_. Robot Framework `installation instructions`__ cover both
-Robot and Python installations, and Selenium2Library has its own
+Robot and Python installations, and SeleniumLibrary has its own
 `installation instructions`__.
 
 In practice it is easiest to install Robot Framework and
@@ -103,7 +103,7 @@ manager. Once you have pip installed, all you need to do is running
 these commands::
 
     pip install robotframework
-    pip install robotframework-selenium2library
+    pip install robotframework-seleniumlibrary
 
 __ https://github.com/robotframework/robotframework/blob/master/INSTALL.rst
 __ https://github.com/robotframework/SeleniumLibrary/blob/master/INSTALL.rst
