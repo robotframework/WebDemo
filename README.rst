@@ -15,9 +15,8 @@ are executed, and how logs and reports look like.
 Downloading demo package
 ========================
 
-To get the demo, you can either download and extract the latest
-``WebDemo-<date>.zip`` package from the `download page`_ or checkout the
-`source code`_ directly. As a result you get ``WebDemo`` directory with
+To get the demo, you can either `download`_ the repository from GitHub or checkout
+the `source code`_ directly. As a result you get ``WebDemo`` directory with
 ``demoapp`` and ``login_tests`` sub directories.
 
 Example `test cases`_ and `generated results`_ are available also online.
@@ -163,12 +162,12 @@ Consult SeleniumLibrary_ documentation about supported browsers.
 .. _SeleniumLibrary: https://github.com/robotframework/SeleniumLibrary
 .. _Python: http://python.org
 .. _pip: http://pip-installer.org
-.. _download page: https://bitbucket.org/robotframework/webdemo/downloads
-.. _source code: https://bitbucket.org/robotframework/webdemo/src
-.. _valid_login.robot: https://bitbucket.org/robotframework/webdemo/src/master/login_tests/valid_login.robot
-.. _invalid_login.robot: https://bitbucket.org/robotframework/webdemo/src/master/login_tests/invalid_login.robot
-.. _gherkin_login.robot: https://bitbucket.org/robotframework/webdemo/src/master/login_tests/gherkin_login.robot
-.. _resource.robot: https://bitbucket.org/robotframework/webdemo/src/master/login_tests/resource.robot
+.. _download: https://github.com/robotframework/WebDemo/archive/master.zip
+.. _source code: https://github.com/robotframework/WebDemo.git
+.. _valid_login.robot: https://github.com/robotframework/WebDemo/blob/master/login_tests/valid_login.robot
+.. _invalid_login.robot: https://github.com/robotframework/WebDemo/blob/master/login_tests/invalid_login.robot
+.. _gherkin_login.robot: https://github.com/robotframework/WebDemo/blob/master/login_tests/gherkin_login.robot
+.. _resource.robot: https://github.com/robotframework/WebDemo/blob/master/login_tests/resource.robot
 .. _report.html: http://robotframework.bitbucket.org/WebDemo/report.html
 .. _log.html: http://robotframework.bitbucket.org/WebDemo/log.html
 .. _Robot Framework User Guide: http://robotframework.org/robotframework/#user-guide
