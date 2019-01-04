@@ -105,7 +105,7 @@ these commands::
     pip install robotframework-seleniumlibrary
 
 __ https://github.com/robotframework/robotframework/blob/master/INSTALL.rst
-__ https://github.com/robotframework/SeleniumLibrary/blob/master/INSTALL.rst
+__ https://github.com/robotframework/SeleniumLibrary#installation
 
 Starting demo application
 -------------------------
