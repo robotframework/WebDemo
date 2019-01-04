@@ -168,6 +168,6 @@ Consult SeleniumLibrary_ documentation about supported browsers.
 .. _invalid_login.robot: https://github.com/robotframework/WebDemo/blob/master/login_tests/invalid_login.robot
 .. _gherkin_login.robot: https://github.com/robotframework/WebDemo/blob/master/login_tests/gherkin_login.robot
 .. _resource.robot: https://github.com/robotframework/WebDemo/blob/master/login_tests/resource.robot
-.. _report.html: http://robotframework.bitbucket.org/WebDemo/report.html
-.. _log.html: http://robotframework.bitbucket.org/WebDemo/log.html
+.. _report.html: http://robotframework.org/WebDemo/report.html
+.. _log.html: http://robotframework.org/WebDemo/log.html
 .. _Robot Framework User Guide: http://robotframework.org/robotframework/#user-guide
