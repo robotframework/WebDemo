@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<title>Web testing with Robot Framework and SeleniumLibrary</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="extra.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="web-testing-with-robot-framework-and-seleniumlibrary">
+<h1 class="title">Web testing with Robot Framework and SeleniumLibrary</h1>
+
+<p><a class="reference external" href="http://robotframework.org">Robot Framework</a> is a generic open source test automation framework and
+<a class="reference external" href="https://github.com/robotframework/SeleniumLibrary">SeleniumLibrary</a> is one of the many test libraries that can be used with
+it. In addition to showing how they can be used together for web testing,
+this demo introduces the basic Robot Framework test data syntax, how tests
+are executed, and how logs and reports look like.</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title first"><strong>Contents:</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#downloading-demo-package" id="id4">Downloading demo package</a></p></li>
+<li><p><a class="reference internal" href="#demo-application" id="id5">Demo application</a></p></li>
+<li><p><a class="reference internal" href="#test-cases" id="id6">Test cases</a></p></li>
+<li><p><a class="reference internal" href="#generated-results" id="id7">Generated results</a></p></li>
+<li><p><a class="reference internal" href="#running-demo" id="id8">Running demo</a></p></li>
+</ul>
+</div>
+<div class="section" id="downloading-demo-package">
+<h1><a class="toc-backref" href="#id4">Downloading demo package</a></h1>
+<p>To get the demo, you can either <a class="reference external" href="https://github.com/robotframework/WebDemo/archive/master.zip">download</a> the repository from GitHub or checkout
+the <a class="reference external" href="https://github.com/robotframework/WebDemo.git">source code</a> directly. As a result you get <span class="docutils literal">WebDemo</span> directory with
+<span class="docutils literal">demoapp</span> and <span class="docutils literal">login_tests</span> sub directories.</p>
+<p>Example <a class="reference internal" href="#test-cases">test cases</a> and <a class="reference internal" href="#generated-results">generated results</a> are available also online.
+There is thus no need to download the demo if you are not interested in
+<a class="reference internal" href="#running-demo">running it</a> yourself.</p>
+</div>
+<div class="section" id="demo-application">
+<h1><a class="toc-backref" href="#id5">Demo application</a></h1>
+<p>The demo application is a very simple login page shown below. With
+user name <span class="docutils literal">demo</span> and password <span class="docutils literal">mode</span> you get into a welcome page, and
+otherwise you end up to an error page. How to start and stop the
+application yourself is explained in the <a class="reference internal" href="#starting-demo-application">Starting demo application</a>
+section.</p>
+<div class="figure">
+<img alt="demoapp.png" src="demoapp.png" />
+</div>
+</div>
+<div class="section" id="test-cases">
+<h1><a class="toc-backref" href="#id6">Test cases</a></h1>
+<p>Test case files as well as a resource file used by them are located in
+the <span class="docutils literal">login_test</span> directory. Click file names below to see the latest versions
+online.</p>
+<dl>
+<dt><a class="reference external" href="https://github.com/robotframework/WebDemo/blob/master/login_tests/valid_login.robot">valid_login.robot</a></dt>
+<dd><p>A test suite with a single test for valid login.</p>
+<p>This test has a workflow that is created using keywords in
+the imported resource file.</p>
+</dd>
+<dt><a class="reference external" href="https://github.com/robotframework/WebDemo/blob/master/login_tests/invalid_login.robot">invalid_login.robot</a></dt>
+<dd><p>A test suite containing tests related to invalid login.</p>
+<p>These tests are data-driven by their nature. They use a single
+keyword, specified with the <span class="docutils literal">Test Template</span> setting, that is called
+with different arguments to cover different scenarios.</p>
+<p>This suite also demonstrates using setups and teardowns in
+different levels.</p>
+</dd>
+<dt><a class="reference external" href="https://github.com/robotframework/WebDemo/blob/master/login_tests/gherkin_login.robot">gherkin_login.robot</a></dt>
+<dd><p>A test suite with a single Gherkin style test.</p>
+<p>This test is functionally identical to the example in the
+<a class="reference external" href="https://github.com/robotframework/WebDemo/blob/master/login_tests/valid_login.robot">valid_login.robot</a> file.</p>
+</dd>
+<dt><a class="reference external" href="https://github.com/robotframework/WebDemo/blob/master/login_tests/resource.robot">resource.robot</a></dt>
+<dd><p>A resource file with reusable keywords and variables.</p>
+<p>The system specific keywords created here form our own
+domain specific language. They utilize keywords provided
+by the imported <a class="reference external" href="https://github.com/robotframework/SeleniumLibrary">SeleniumLibrary</a>.</p>
+</dd>
+</dl>
+<p>See <a class="reference external" href="http://robotframework.org/robotframework/#user-guide">Robot Framework User Guide</a> for more details about the test data syntax.</p>
+</div>
+<div class="section" id="generated-results">
+<h1><a class="toc-backref" href="#id7">Generated results</a></h1>
+<p>After <a class="reference internal" href="#running-tests">running tests</a> you will get report and log in HTML format. Example
+files are also visible online in case you are not interested in running
+the demo yourself:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://robotframework.org/WebDemo/report.html">report.html</a></p></li>
+<li><p><a class="reference external" href="http://robotframework.org/WebDemo/log.html">log.html</a></p></li>
+</ul>
+</div>
+<div class="section" id="running-demo">
+<h1><a class="toc-backref" href="#id8">Running demo</a></h1>
+<div class="section" id="preconditions">
+<h2>Preconditions</h2>
+<p>A precondition for running the tests is having <a class="reference external" href="http://robotframework.org">Robot Framework</a> and
+<a class="reference external" href="https://github.com/robotframework/SeleniumLibrary">SeleniumLibrary</a> installed, and they in turn require
+<a class="reference external" href="http://python.org">Python</a>. Robot Framework <a class="reference external" href="https://github.com/robotframework/robotframework/blob/master/INSTALL.rst">installation instructions</a> cover both
+Robot and Python installations, and SeleniumLibrary has its own
+<a class="reference external" href="https://github.com/robotframework/SeleniumLibrary#installation">installation instructions</a>.</p>
+<p>In practice it is easiest to install Robot Framework and
+SeleniumLibrary along with its dependencies using <a class="reference external" href="http://pip-installer.org">pip</a> package
+manager. Once you have pip installed, all you need to do is running
+these commands:</p>
+<pre class="literal-block">pip install robotframework
+pip install robotframework-seleniumlibrary</pre>
+</div>
+<div class="section" id="starting-demo-application">
+<h2>Starting demo application</h2>
+<p>Running tests requires the <a class="reference internal" href="#demo-application">demo application</a> located under <span class="docutils literal">demoapp</span>
+directory to be running.  It can be started either by double clicking
+<span class="docutils literal">demoapp/server.py</span> file in a file manager or by executing it from the
+command line:</p>
+<pre class="literal-block">python demoapp/server.py</pre>
+<p>After the demo application is started, it is be available in URL
+<a class="reference external" href="http://localhost:7272">http://localhost:7272</a>. You can test it manually, valid credentials are
+<span class="docutils literal">demo/mode</span>, and it needs to be running while executing the automated
+tests.</p>
+<p>If the application was started by double-clicking <span class="docutils literal">demoapp/server.py</span>
+file, it can be shut down by closing the opened window. If it was
+executed from the command line, using <span class="docutils literal"><span class="pre">Ctrl-C</span></span> is enough.</p>
+</div>
+<div class="section" id="running-tests">
+<h2>Running tests</h2>
+<p>The <a class="reference internal" href="#test-cases">test cases</a> are located in the <span class="docutils literal">login_tests</span> directory. They can be
+executed using the <span class="docutils literal">robot</span> command:</p>
+<pre class="literal-block">robot login_tests</pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are using Robot Framework 2.9 or earlier, you need to
+use the <span class="docutils literal">pybot</span> command instead.</p>
+</div>
+<p>You can also run an individual test case file and use various command line
+options supported by Robot Framework:</p>
+<pre class="literal-block">robot login_tests/valid_login.robot
+robot --test InvalidUserName --loglevel DEBUG login_tests</pre>
+<p>Run <span class="docutils literal">robot <span class="pre">--help</span></span> for more information about the command line usage and see
+<a class="reference external" href="http://robotframework.org/robotframework/#user-guide">Robot Framework User Guide</a> for more details about test execution in general.</p>
+</div>
+<div class="section" id="using-different-browsers">
+<h2>Using different browsers</h2>
+<p>The browser that is used is controlled by <span class="docutils literal">${BROWSER}</span> variable defined in
+<a class="reference external" href="https://github.com/robotframework/WebDemo/blob/master/login_tests/resource.robot">resource.robot</a> resource file. Firefox browser is used by default, but that
+can be easily overridden from the command line:</p>
+<pre class="literal-block">robot --variable BROWSER:Chrome login_tests
+robot --variable BROWSER:IE login_tests</pre>
+<p>Consult <a class="reference external" href="https://github.com/robotframework/SeleniumLibrary">SeleniumLibrary</a> documentation about supported browsers.</p>
+</div>
+</div>
+</div>
+</body>
+</html>
