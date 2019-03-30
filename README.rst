@@ -101,8 +101,7 @@ SeleniumLibrary along with its dependencies using `pip`_ package
 manager. Once you have pip installed, all you need to do is running
 these commands::
 
-    pip install robotframework
-    pip install robotframework-seleniumlibrary
+    pip install -r requirements.txt
 
 __ https://github.com/robotframework/robotframework/blob/master/INSTALL.rst
 __ https://github.com/robotframework/SeleniumLibrary#installation
