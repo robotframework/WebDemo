@@ -1,0 +1,8 @@
+version: '2'
+services:
+  webdemo:
+    build:
+      context: ./demoapp
+      dockerfile: Dockerfile
+    ports:
+      - '7272:7272'
