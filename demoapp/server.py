@@ -34,7 +34,7 @@ class DemoServer(ThreadingMixIn, HTTPServer):
     allow_reuse_address = True
 
     def __init__(self, port=PORT):
-        HTTPServer.__init__(self, ('localhost', int(port)),
+        HTTPServer.__init__(self, ('0.0.0.0', int(port)),
                             SimpleHTTPRequestHandler)
 
     def serve(self, directory=ROOT):

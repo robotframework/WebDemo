@@ -125,6 +125,11 @@ If the application was started by double-clicking ``demoapp/server.py``
 file, it can be shut down by closing the opened window. If it was
 executed from the command line, using ``Ctrl-C`` is enough.
 
+OR with docker-compose:
+Start to backround: `docker-compose up -d`
+Stop: `docker-compose down`
+
+
 Running tests
 -------------
 
