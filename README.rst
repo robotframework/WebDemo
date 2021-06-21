@@ -40,7 +40,7 @@ Test cases
 ==========
 
 Test case files as well as a resource file used by them are located in
-the ``login_test`` directory. Click file names below to see the latest versions
+the ``login_tests`` directory. Click file names below to see the latest versions
 online.
 
 `valid_login.robot`_
