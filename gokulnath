@@ -1,0 +1,18 @@
+*** Settings ***
+Library  SeleniumLibrary
+Library  RequestsLibrary
+Library  JSONLibrary
+Library  Collections
+
+*** Variables ***
+${base_url}    https://gorest.co.in/
+*** Test Cases ***
+Get_users
+  create session mysession  ${base_url}
+  ${response}=    getrequest mysession  /public/v2/users
+
+  ${json_obj}=    to json  ${response.content}
+  
+  #Email data validation
+  ${Email}= get value from json    ${json_obj}    $.email
+  Log  ${email}
