@@ -1,172 +1,108 @@
-====================================================
+
 Web testing with Robot Framework and SeleniumLibrary
 ====================================================
 
-`Robot Framework`_ is a generic open source test automation framework and
-SeleniumLibrary_ is one of the many test libraries that can be used with
-it. In addition to showing how they can be used together for web testing,
-this demo introduces the basic Robot Framework test data syntax, how tests
-are executed, and how logs and reports look like.
+Robot Framework
+---------------
 
-.. contents:: **Contents:**
-   :depth: 1
-   :local:
+Robot Framework is a generic open source test automation framework.
 
-Downloading demo package
-========================
+SeleniumLibrary
+---------------
 
-To get the demo, you can either `download`_ the repository from GitHub or checkout
-the `source code`_ directly. As a result you get ``WebDemo`` directory with
-``demoapp`` and ``login_tests`` sub directories.
+SeleniumLibrary is one of the many test libraries that can be used with Robot Framework.
 
-Example `test cases`_ and `generated results`_ are available also online.
-There is thus no need to download the demo if you are not interested in
-`running it`__ yourself.
-
-__ `running demo`_
-
-Demo application
-================
-
-The demo application is a very simple login page shown below. With
-user name ``demo`` and password ``mode`` you get into a welcome page, and
-otherwise you end up to an error page. How to start and stop the
-application yourself is explained in the `Starting demo application`_
-section.
-
-.. figure:: demoapp.png
-
-Test cases
-==========
-
-Test case files as well as a resource file used by them are located in
-the ``login_tests`` directory. Click file names below to see the latest versions
-online.
-
-`valid_login.robot`_
-    A test suite with a single test for valid login.
-
-    This test has a workflow that is created using keywords in
-    the imported resource file.
-
-`invalid_login.robot`_
-    A test suite containing tests related to invalid login.
-
-    These tests are data-driven by their nature. They use a single
-    keyword, specified with the ``Test Template`` setting, that is called
-    with different arguments to cover different scenarios.
-
-    This suite also demonstrates using setups and teardowns in
-    different levels.
-
-`gherkin_login.robot`_
-    A test suite with a single Gherkin style test.
-
-    This test is functionally identical to the example in the
-    `valid_login.robot`_ file.
-
-`resource.robot`_
-    A resource file with reusable keywords and variables.
-
-    The system specific keywords created here form our own
-    domain specific language. They utilize keywords provided
-    by the imported SeleniumLibrary_.
-
-See `Robot Framework User Guide`_ for more details about the test data syntax.
-
-Generated results
-=================
-
-After `running tests`_ you will get report and log in HTML format. Example
-files are also visible online in case you are not interested in running
-the demo yourself:
-
-- `report.html`_
-- `log.html`_
-
-Running demo
+Demo Package
 ============
 
-Preconditions
--------------
+To get the demo, you can either download the repository from [GitHub](https://github.com/robotframework/WebDemo/archive/master.zip) or checkout the source code directly from [GitHub](https://github.com/robotframework/WebDemo.git). As a result, you get the ``WebDemo`` directory with ``demoapp`` and ``login_tests`` subdirectories.
 
-A precondition for running the tests is having `Robot Framework`_ and
-SeleniumLibrary_ installed, and they in turn require
-Python_. Robot Framework `installation instructions`__ cover both
-Robot and Python installations, and SeleniumLibrary has its own
-`installation instructions`__.
+Online Example
+--------------
 
-In practice it is easiest to install Robot Framework and
-SeleniumLibrary along with its dependencies using `pip`_ package
-manager. Once you have pip installed, all you need to do is running
-these commands::
+Example test cases and generated results are also available online. There is thus no need to download the demo if you are not interested in running it yourself.
 
-    pip install -r requirements.txt
+Demo Application
+================
 
-__ https://github.com/robotframework/robotframework/blob/master/INSTALL.rst
-__ https://github.com/robotframework/SeleniumLibrary#installation
+The demo application is a very simple login page. With user name ``demo`` and password ``mode``, you get into a welcome page, and otherwise, you end up on an error page.
 
-Starting demo application
+Starting Demo Application
 -------------------------
 
-Running tests requires the `demo application`_ located under ``demoapp``
-directory to be running.  It can be started either by double clicking
-``demoapp/server.py`` file in a file manager or by executing it from the
-command line::
+Running tests requires the demo application located under the ``demoapp`` directory to be running. It can be started either by double-clicking the ``demoapp/server.py`` file in a file manager or by executing it from the command line:
 
-    python demoapp/server.py
+```
+python demoapp/server.py
+```
 
-After the demo application is started, it is be available in URL
-http://localhost:7272. You can test it manually, valid credentials are
-``demo/mode``, and it needs to be running while executing the automated
-tests.
+After the demo application is started, it is available at URL [http://localhost:7272](http://localhost:7272). You can test it manually; valid credentials are ``demo/mode``, and it needs to be running while executing the automated tests.
 
-If the application was started by double-clicking ``demoapp/server.py``
-file, it can be shut down by closing the opened window. If it was
-executed from the command line, using ``Ctrl-C`` is enough.
-
-Running tests
+Running Tests
 -------------
 
-The `test cases`_ are located in the ``login_tests`` directory. They can be
-executed using the ``robot`` command::
+The test cases are located in the ``login_tests`` directory. They can be executed using the ``robot`` command:
 
-    robot login_tests
+```
+robot login_tests
+```
 
-.. note:: If you are using Robot Framework 2.9 or earlier, you need to
-          use the ``pybot`` command instead.
+You can also run an individual test case file and use various command line options supported by Robot Framework.
 
-You can also run an individual test case file and use various command line
-options supported by Robot Framework::
-
-    robot login_tests/valid_login.robot
-    robot --test InvalidUserName --loglevel DEBUG login_tests
-
-Run ``robot --help`` for more information about the command line usage and see
-`Robot Framework User Guide`_ for more details about test execution in general.
-
-Using different browsers
+Using Different Browsers
 ------------------------
 
-The browser that is used is controlled by ``${BROWSER}`` variable defined in
-`resource.robot`_ resource file. Firefox browser is used by default, but that
-can be easily overridden from the command line::
+The browser that is used is controlled by the ``${BROWSER}`` variable defined in the ``resource.robot`` resource file. Firefox browser is used by default, but that can be easily overridden from the command line.
 
-    robot --variable BROWSER:Chrome login_tests
-    robot --variable BROWSER:IE login_tests
+For more details about the test data syntax and test execution, see the [Robot Framework User Guide](http://robotframework.org/robotframework/#user-guide).
 
-Consult SeleniumLibrary_ documentation about supported browsers.
+Installation
+------------
 
-.. _Robot Framework: http://robotframework.org
-.. _SeleniumLibrary: https://github.com/robotframework/SeleniumLibrary
-.. _Python: http://python.org
-.. _pip: http://pip-installer.org
-.. _download: https://github.com/robotframework/WebDemo/archive/master.zip
-.. _source code: https://github.com/robotframework/WebDemo.git
-.. _valid_login.robot: https://github.com/robotframework/WebDemo/blob/master/login_tests/valid_login.robot
-.. _invalid_login.robot: https://github.com/robotframework/WebDemo/blob/master/login_tests/invalid_login.robot
-.. _gherkin_login.robot: https://github.com/robotframework/WebDemo/blob/master/login_tests/gherkin_login.robot
-.. _resource.robot: https://github.com/robotframework/WebDemo/blob/master/login_tests/resource.robot
-.. _report.html: http://robotframework.org/WebDemo/report.html
-.. _log.html: http://robotframework.org/WebDemo/log.html
-.. _Robot Framework User Guide: http://robotframework.org/robotframework/#user-guide
+To install the required dependencies and WebDriverManager globally, follow these steps:
+
+1. Install Python if not already installed.
+2. Install Pipenv using pip:
+
+   ```
+   pip install pipenv
+   ```
+
+3. Navigate to the project directory containing the Pipfile, and run:
+
+   ```
+   pipenv install
+   ```
+
+   This will create a virtual environment and install all the required dependencies specified in the Pipfile.
+
+4. Install WebDriverManager globally using pip:
+
+   ```
+   pip install webdrivermanager
+   ```
+
+5. After installing WebDriverManager, you can use it to manage browser drivers. For example, to install Firefox and Chrome drivers and link them to the /usr/local/bin directory on Unix-like systems:
+
+   ```
+   webdrivermanager firefox chrome --linkpath /usr/local/bin
+   ```
+
+   Note: Ensure that /usr/local/bin is added to your PATH environment variable.
+
+   On Windows, the process is slightly different. You can add the installation directory to your PATH using the following steps:
+
+   - Right-click on My Computer or This PC, select Properties.
+   - Select Advanced system settings.
+   - Click on the Environment Variables button.
+   - Under System Variables, select PATH and click Edit.
+   - Click New and paste the installation directory.
+   - Click OK several times and restart your computer.
+
+Links
+-----
+
+- Robot Framework: http://robotframework.org
+- SeleniumLibrary: https://github.com/robotframework/SeleniumLibrary
+- Python: http://python.org
+- Pip: http://pip-installer.org
